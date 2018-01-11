@@ -15,7 +15,7 @@ body {
      border: 1px dotted gray;
      padding: 20px;
 
-     background: linear-gradient(red, orange);
+     background: linear-gradient(-90deg, red, orange, blue, purple, brown);
      font-family: "Helvetica", sans-serif;
      color: white;
 
@@ -45,4 +45,42 @@ a, a:hover {
 
 .project {
     margin-left: 20px;
+    text-align: center;
+
+    animation: spin;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+}
+
+.title {
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 30px;
+    animation: enlarge;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+.title p {
+    animation: spin;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+}
+
+#project-header {
+    text-align:center;
+}
+
+@keyframes enlarge {
+    0% {font-size: 30px;}
+    50% {font-size: 100px;}
+    100% {font-size: 30px;}
+}
+
+@keyframes spin {
+    0% {transform:rotate(0deg);}
+    50% {transform:rotate(360deg);}
+    100% {transform:rotate(-360deg);}
 }
